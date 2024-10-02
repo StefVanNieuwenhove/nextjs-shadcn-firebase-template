@@ -1,4 +1,5 @@
 // Import the functions you need from the SDKs you need
+import { env } from '@/env';
 import { initializeApp } from 'firebase/app';
 import { getFirestore } from 'firebase/firestore';
 // TODO: Add SDKs for Firebase products that you want to use
@@ -6,12 +7,12 @@ import { getFirestore } from 'firebase/firestore';
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: 'AIzaSyDghndgtq8fD9wWE4GQMTv_cLmML5cKIkM',
-  authDomain: 'nextjs-shadcn-firebase-templat.firebaseapp.com',
-  projectId: 'nextjs-shadcn-firebase-templat',
-  storageBucket: 'nextjs-shadcn-firebase-templat.appspot.com',
-  messagingSenderId: '80120796335',
-  appId: '1:80120796335:web:c84e910bb8764f45b4705a',
+  apiKey: env.NEXT_PUBLIC_API_KEY,
+  authDomain: env.NEXT_PUBLIC_AUTH_DOMAIN,
+  projectId: env.NEXT_PUBLIC_PROJECT_ID,
+  storageBucke: env.NEXT_PUBLIC_STORAGE_BUCKET,
+  messagingSenderId: env.NEXT_PUBLIC_MESSAGE_SENDER_ID,
+  appId: env.NEXT_PUBLIC_APP_ID,
 };
 
 // Initialize Firebase
